@@ -16,7 +16,8 @@ export const PhaserGame = forwardRef<RefPhaserGameProps, PhaserGameProps>(functi
   {currentActiveScene},
   ref,
 ) {
-  const game = useRef<Phaser.Game | null>(null);
+  /* eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion */
+  const game = useRef<Phaser.Game | null>(null!);
 
   useLayoutEffect(() => {
     if (game.current === null) {
